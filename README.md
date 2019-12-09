@@ -5,62 +5,218 @@
 
 The CONTENTs with time of appearance
 --------------------------------------
->
-00:00 Introduction \
-01:14 What is React \
-05:48 Setting Up the Development Environment \
-09:27 Your First React App \
-16:03 Hello World
 
->
-22:26 Components \
-24:06 Setting Up the Project \
-26:15 Your First React Component \
-31:38 Specifying Children \
-35:56 Embedding Expressions \
-40:49 Setting Attributes \
-46:36 Rendering Classes Dynamically
-
->
-50:57 Rendering Lists
-
->
-54:58 Conditional Rendering
-
->
-1:01:04 Handling Events \
-1:03:56 Binding Event Handlers
-
->
-1:08:34 Updating the State \
-1:10:51 What Happens When State Changes \
-1:12:58 Passing Event Arguments
-
->
-1:17:31 Composing Components \
-1:21:18 Passing Data to Components \
-1:24:31 Passing Children
-
->
-1:27:44 Debugging React Apps \
-1:31:55 Props vs State
-
->
-1:34:22 Raising and Handling Events \
-1:39:16 Updating the State \
-1:43:57 Single Source of Truth \
-1:47:55 Removing the Local State
-
->
-1:54:44 Multiple Components in Sync \
-2:00:39 Lifting the State Up
-
->
-2:06:18 Stateless Functional Components \
-2:08:49 Destructuring Arguments
-
->
-2:10:52 Lifecycle Hooks \
-2:12:32 Mounting Phase \
-2:18:09 Updating Phase \
-2:22:31 Unmounting Phas
+Getting Started (00:28)
+ 1- What is React (4:32)
+ 2- Setting Up the Development Environment (3:37)
+ 3- Your First React App (6:33)
+ 4- Hello World (5:25)
+ 5- Custom Configs (3:11)
+ 6- Full-stack Architecture (2:44)
+ 7- Course Structure (2:24)
+ES6 Refresher (00:48)
+ 1 - Introduction (1:43)
+ 2- Let vs Var vs Const (3:52)
+ 3- Objects (2:45)
+ 4- The this Keyword (2:49)
+ 5- Binding this (2:36)
+ 6- Arrow Functions (4:15)
+ 7- Arrow Functions and this (4:14)
+ 8- Array.map Method (3:36)
+ 9- Object Destructuring (2:29)
+ 10- Spread Operator (4:02)
+ 11- Classes (3:45)
+ 12- Inheritance (4:03)
+ 13- Modules (4:11)
+ 14- Named and Default Exports (5:15)
+Components (01:17)
+ 1- Introduction (1:38)
+ 2- Setting Up the Project (2:06)
+ 3- Your First React Component (5:20)
+ 4- Specifying Children (4:16)
+ 5- Embedding Expressions (4:50)
+ 6- Setting Attributes (5:45)
+ 7- Rendering Classes Dynamically (4:18)
+ 8- Rendering Lists (3:58)
+ 9- Conditional Rendering (6:04)
+ 10- Handling Events (2:49)
+ 11- Binding Event Handlers (4:36)
+ 12- Updating the State (2:14)
+ 13- What Happens When State Changes (2:04)
+ 14- Passing Event Arguments (3:04)
+ 15- Setting Up the Vidly Project (5:38)
+ 16- Exercises (3:25)
+ 17- Building the Movies Component (7:18)
+ 18- Deleting a Movie (5:18)
+ 19- Conditional Rendering (3:26)
+ 20 - Summary (0:36)
+Composing Components (01:19)
+ 1- Introduction (0:45)
+ 2- Composing Components (3:45)
+ 3- Passing Data to Components (3:11)
+ 4- Passing Children (3:10)
+ 5 - Debugging React Apps (4:09)
+ 6- Props vs State (2:24)
+ 7 - Raising and Handling Events (4:52)
+ 8- Updating the State (4:38)
+ 9- Single Source of Truth (3:55)
+ 10- Removing the Local State (6:47)
+ 11- Multiple Components in Sync (5:53)
+ 12- Lifting the State Up (5:36)
+ 13 - Stateless Functional Components (2:29)
+ 14- Destructuring Arguments (2:00)
+ 15 - Lifecycle Hooks (1:38)
+ 16 - Mounting Phase (5:34)
+ 17- Updating Phase (4:20)
+ 18- Unmounting Phase (1:26)
+ 19- Exercise- Decrement Button (1:05)
+ 20- Solution - Decrement Button (4:53)
+ 21- Exercise- Like Component (1:44)
+ 22- Solution- Like Component (12:26)
+ 23- Summary (0:42)
+Pagination, Filtering, and Sorting (01:47)
+ 1- Introduction (1:08)
+ 2- Exercise- Pagination Component (1:01)
+ 3- Pagination- Component Interface (3:47)
+ 4- Pagination- Displaying Pages (6:48)
+ 5- Pagination- Handling Page Changes (5:49)
+ 6- Pagination- Paginating Data (6:14)
+ 7- Pagination- Type Checking with PropTypes (4:56)
+ 8- Exercise- ListGroup Component (1:24)
+ 9- Filtering- Component Interface (5:32)
+ 10- Filtering- Displaying Items (3:57)
+ 11- Filtering- Default Props (2:06)
+ 12- Filtering- Handling Selection (4:20)
+ 13- Filtering- Implementing Filtering (2:59)
+ 14- Filtering- Adding All Genres (3:39)
+ 15- Sorting- Extracting MoviesTable (5:19)
+ 16- Sorting- Raising the Sort Event (3:28)
+ 17- Sorting- Implementing Sorting (5:13)
+ 18- Sorting- Moving Responsibility (5:15)
+ 19- Sorting- Extracting TableHeader (7:44)
+ 20- Sorting- Extracting TableBody (3:12)
+ 21- Sorting- Rendering Cell Content (8:02)
+ 22- Sorting- Unique Keys - Final (2:58)
+ 23- Sorting- Adding the Sort Icon (3:57)
+ 24- Sorting- Extracting Table (3:51)
+ 25- Sorting- Extracting a Method (3:18)
+ 26- Destructuring Arguments (0:58)
+ 27- Summary (0:51)
+ StartA Quick Note
+Routing (00:53)
+ 1- Introduction (0:33)
+ 2- Setup (1:46)
+ 3- Adding Routing (4:15)
+ 4- Switch (2:26)
+ 5- Link (4:20)
+ 6- Route Props (2:10)
+ 7- Passing Props (2:35)
+ 8- Route Parameters (3:32)
+ 9- Optional Parameters (2:06)
+ 10- Query String Parameters (3:51)
+ 11- Redirects (3:06)
+ 12- Programmatic Navigation (2:20)
+ 13- Nested Routing (4:35)
+ 14- Exercises- NavBar and Routing (1:43)
+ 15- Adding React Router (1:26)
+ 16- Adding Routes (4:57)
+ 17- Adding the NavBar (4:39)
+ 18- Linking to the MovieForm (4:42)
+ 19 - Summary (0:31)
+Forms (01:34)
+ 1- Introduction (0:38)
+ 2- Building a Bootstrap Form (5:34)
+ 3- Handling Form Submission (2:00)
+ 4- Refs (3:58)
+ 5- Controlled Elements (4:32)
+ 6- Handling Multiple Inputs (2:49)
+ 7- Common Errors (2:28)
+ 8- Extracting a Reusable Input (3:57)
+ 9- Validation (2:56)
+ 10- A Basic Validation Implementation (3:11)
+ 11- Displaying Validation Errors (3:42)
+ 12- Validation on Change (4:19)
+ 13- Joi (4:33)
+ 14- Validating a Form Using Joi (4:43)
+ 15- Validating a Field Using Joi (5:22)
+ 16- Disabling the Submit Button (1:11)
+ 17- Code Review (3:13)
+ 18- Extracting a Reusable Form (4:51)
+ 19- Extracting Helper Rendering Methods (8:18)
+ 20- Register Form (1:42)
+ 21- Code Review (1:10)
+ 22- Exercise 2- Movie Form (3:18)
+ 23- Code Review (8:24)
+ 24- Exercise 3- Search Movies (1:22)
+ 25- Code Review (5:12)
+Calling Backend Services (01:42)
+ 1- Introduction (1:13)
+ 2- JSON Placeholder (2:54)
+ 3- Http Clients (2:56)
+ 4- Getting Data (5:26)
+ 5- Creating Data (4:52)
+ 6- Lifecycle of a Request (2:50)
+ 7- Updating Data (4:14)
+ 8- Deleting Data (1:35)
+ 9- Optimistic vs Pessimistic Updates (4:24)
+ 10- Expected vs Unexpected Errors (6:40)
+ 11- Handling Unexpected Errors Globally (7:54)
+ 12- Extracting a Reusable Http Service (3:43)
+ 13- Extracting a Config Module (1:36)
+ 14- Displaying Toast Notifications (2:56)
+ 15- Logging Errors (5:47)
+ 16- Extracting a Logger Service (4:25)
+ 17- Vidly Backend (1:50)
+ 18- Installing MongoDB on Mac (3:58)
+ 19- Installing MongoDB on Windows (5:39)
+ 20- Setting Up the Node Backend (2:44)
+ 21- Disabling Authentication (4:01)
+ 22- Exercise- Connect Movies Page to the Backend (1:56)
+ 23- Adding Http and Log Services (2:38)
+ 24- Replacing FakeGenreService (3:23)
+ 25- Replacing FakeMovieService (5:48)
+ 26- Extracting a Config File (1:54)
+ 27- Exercise- Connect Movie Form to the Backend (0:56)
+ 28- Populating the Form (3:45)
+ 29- Refactoring (2:30)
+ 30- Saving the Movie (2:40)
+ 31- Refactoring (2:36)
+Authentication and Authorization (01:41)
+ 1 - Introduction (0:49)
+ 2- Registering a New User (2:37)
+ 3- Submitting the Registration Form (4:30)
+ 4- Handling Registration Errors (1:58)
+ 5- Logging in a User (1:43)
+ 6- Submitting the Login Form (2:23)
+ 7- Handling Login Errors (1:51)
+ 8- Storing the JWT (3:04)
+ 9- Logging in the User upon Registration (5:37)
+ 10- JSON Web Tokens (JWT) (3:59)
+ 11- Getting the Current User (4:18)
+ 12- Displaying the Current User on NavBar (4:48)
+ 13- Logging out a User (2:44)
+ 14- Refactoring (10:03)
+ 15- Calling Protected API Endpoints (4:10)
+ 16- Fixing Bi-directional Dependencies (2:43)
+ 17- Authorization (6:30)
+ 18- Showing or Hiding Elements based on the User (2:40)
+ 19- Protecting Routes (2:50)
+ 20- Extracting ProtectedRoute (5:55)
+ 21- Redirecting after Login (5:40)
+ 22- Exercise (0:19)
+ 23- Hiding the Delete Column (4:19)
+Deployment (00:35)
+ 1- Introduction (0:38)
+ 2- Environment Variables (4:58)
+ 3- Production Builds (2:48)
+ 4- Getting Started with Heroku (2:06)
+ 5- MongoDB in the Cloud (2:35)
+ 6- Adding Code to a Git Repository (3:05)
+ 7- Deploying to Heroku (3:01)
+ 8- Viewing Logs (2:40)
+ 9- Setting Environment Variables on Heroku (4:37)
+ 10- Preparing the Font-end for Deployment (4:09)
+ 11- Deploying the Front-end (2:38)
+ 12- A Story (2:36)
+ 13- Wrap Up
+ 14- What to Learn Next
