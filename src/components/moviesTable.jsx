@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Like from "./common/like";
+import TableBody from "./common/tableBody";
 import TableHeader from "./common/tableHeader";
 
 class MoviesTable extends Component {
@@ -23,7 +24,7 @@ class MoviesTable extends Component {
                     sortColumn={sortColumn}
                     onSort={onSort}
                 />
-
+                <TableBody data={movies} columns={this.columns} />
                 <tbody>
                     {movies.map(movie => (
                         <tr key={movie._id}>
