@@ -1,7 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 
-const ProductDetails = () => {
-    return <h2>ProductDetails</h2>;
-};
+class ProductDetails extends Component {
+    handleSave = () => {
+        // Navigate to /products
+    };
+
+    render() {
+        return (
+            <div>
+                <h1>Product Details - {this.props.match.params.id} </h1>
+                <button onClick={this.handleSave}>Save</button>
+            </div>
+        );
+    }
+}
 
 export default ProductDetails;
