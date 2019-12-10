@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
 import Customers from "./components/customers";
+import MovieForm from "./components/movieForm";
 import Movies from "./components/movies";
 import NavBar from "./components/navbar";
 import Notfound from "./components/notFound";
@@ -16,6 +17,7 @@ class App extends Component {
                 <NavBar />
                 <main className="container">
                     <Switch>
+                        <Route path="/movies/:id" component={MovieForm}></Route>
                         <Route path="/movies" component={Movies}></Route>
                         <Route path="/customers" component={Customers}></Route>
                         <Route path="/rentals" component={Rentals}></Route>
