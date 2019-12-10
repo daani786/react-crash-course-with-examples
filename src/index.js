@@ -10,7 +10,7 @@ import registerServiceWorker from "./registerServiceWorker";
 
 ReactDOM.render(
     <BrowserRouter>
-        <App title={"Counter App"} />
+        <App title={"React App"} />
     </BrowserRouter>,
     document.getElementById("root")
 );
