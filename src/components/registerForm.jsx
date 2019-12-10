@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-
 import Form from "./common/form";
 import Joi from "joi-browser";
+import React from "react";
 
 class RegisterForm extends Form {
     state = {
