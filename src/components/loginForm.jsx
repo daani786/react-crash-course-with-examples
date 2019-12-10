@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 
 class LoginForm extends Component {
+    state = {
+        account: { username: "", password: "" }
+    };
+
     username = React.createRef();
 
     // componentDidMount() {
@@ -11,8 +15,14 @@ class LoginForm extends Component {
         e.preventDefault();
 
         // Call the server
-        const username = this.username.current.value;
+        //const username = this.username.current.value;
         console.log("submitted");
+    };
+
+    handleChange = e => {
+        const account = { ...this.state.account };
+        account.username = e.currentTarget.value;
+        this.setState({ account });
     };
     render() {
         return (
@@ -22,8 +32,8 @@ class LoginForm extends Component {
                     <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input
-                            autoFocus
-                            ref={this.username}
+                            value={this.state.account.username}
+                            onChange={this.handleChange}
                             id="username"
                             type="text"
                             className="form-control"
