@@ -3,41 +3,24 @@ import "./App.css";
 import React, { Component } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-import Dashboard from "./components/admin/dashboard";
-import Home from "./components/home";
+import Customers from "./components/customers";
 import Movies from "./components/movies";
-import NavBar from "./components/navbar";
 import Notfound from "./components/notFound";
-import Posts from "./components/posts";
-import ProductDetails from "./components/productDetails";
-import Products from "./components/products";
+import Rentals from "./components/rentals";
 
 class App extends Component {
     render() {
         return (
             <main className="container">
-                <NavBar />
-                <div className="content">
-                    <Switch>
-                        <Route
-                            path="/products/:id"
-                            component={ProductDetails}
-                        />
-                        <Route
-                            path="/products"
-                            render={props => (
-                                <Products sortBy="newest" {...props} />
-                            )}
-                        />
-                        <Route path="/posts/:year?/:month?" component={Posts} />
-                        <Route path="/admin" component={Dashboard} />
-                        <Redirect from="/messages" to="/posts" />
-                        <Route path="/not-found" exact component={Notfound} />
-                        <Route path="/" exact component={Home} />
+                <Switch>
+                    <Route path="/movies" component={Movies}></Route>
+                    <Route path="/customers" component={Customers}></Route>
+                    <Route path="/rentals" component={Rentals}></Route>
+                    <Route path="/not-found" component={Notfound}></Route>
 
-                        <Redirect to="/not-found" />
-                    </Switch>
-                </div>
+                    <Redirect from="/" exact to="/movies" />
+                    <Redirect to="/not-found" />
+                </Switch>
             </main>
         );
     }
