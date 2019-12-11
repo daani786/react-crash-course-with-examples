@@ -32,7 +32,12 @@ class Posts extends Component {
         posts[index] = { ...post };
         this.setState({ posts });
     };
-    handleDelete = post => {};
+    handleDelete = async post => {
+        await axios.delete(apiEndpoint + "/" + post.id);
+
+        const posts = this.state.posts.filter(p => p.id !== post.id);
+        this.setState({ posts });
+    };
 
     render() {
         return (
