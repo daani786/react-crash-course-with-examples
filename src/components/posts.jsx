@@ -1,16 +1,64 @@
-import React from "react";
-import queryString from "query-string";
+import React, { Component } from "react";
 
-const Posts = ({ match, location }) => {
-    //http://localhost:3000/posts?sortBy=newest&approved=true
-    const { sortBy, approved } = queryString.parse(location.search);
-    console.log(sortBy, approved);
-    return (
-        <div>
-            <h2>Posts</h2>
-            Year: {match.params.year} , Month: {match.params.month}
-        </div>
-    );
-};
+import axios from "axios";
+
+class Posts extends Component {
+    state = {
+        posts: []
+    };
+
+    async componentDidMount() {
+        // pending > resolved (success) OR rejected (failure)
+        const { data: posts } = await axios.get(
+            "http://jsonplaceholder.typicode.com/posts"
+        );
+        this.setState({ posts });
+    }
+
+    handleUpdate = post => {};
+    handleDelete = post => {};
+
+    render() {
+        return (
+            <React.Fragment>
+                <button className="btn btn-primary" onClick={this.handleAdd}>
+                    Add
+                </button>
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.posts.map(post => (
+                            <tr key={post.id}>
+                                <td>{post.title}</td>
+                                <td>
+                                    <button
+                                        className="btn btn-info btn-sm"
+                                        onClick={() => this.handleUpdate(post)}
+                                    >
+                                        Update
+                                    </button>
+                                </td>
+                                <td>
+                                    <button
+                                        className="btn btn-danger btn-sm"
+                                        onClick={() => this.handleDelete(post)}
+                                    >
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </React.Fragment>
+        );
+    }
+}
 
 export default Posts;

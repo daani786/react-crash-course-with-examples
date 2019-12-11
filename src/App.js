@@ -9,6 +9,7 @@ import MovieForm from "./components/movieForm";
 import Movies from "./components/movies";
 import NavBar from "./components/navbar";
 import Notfound from "./components/notFound";
+import Posts from "./components/posts";
 import RegisterForm from "./components/registerForm";
 import Rentals from "./components/rentals";
 
@@ -26,6 +27,7 @@ class App extends Component {
                         ></Route>
                         <Route path="/movies/:id" component={MovieForm}></Route>
                         <Route path="/movies" component={Movies}></Route>
+                        <Route path="/posts" component={Posts}></Route>
                         <Route path="/customers" component={Customers}></Route>
                         <Route path="/rentals" component={Rentals}></Route>
                         <Route path="/not-found" component={Notfound}></Route>
