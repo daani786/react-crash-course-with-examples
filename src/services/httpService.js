@@ -1,3 +1,4 @@
+import Raven from "raven-js";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -8,7 +9,8 @@ axios.interceptors.response.use(null, error => {
         error.response.status < 500;
 
     if (!expectedError) {
-        console.log("Logging the error", error);
+        //console.log("Logging the error", error);
+        Raven.captureException(error);
         toast.error("An unexpected error occured.");
         //toast("An unexpected error occured.");
     }

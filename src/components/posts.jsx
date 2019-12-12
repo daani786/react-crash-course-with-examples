@@ -41,11 +41,11 @@ class Posts extends Component {
         this.setState({ posts });
 
         try {
-            await http.delete(config.apiEndpoint + "/" + post.id);
+            //await http.delete(config.apiEndpoint + "/" + post.id);
             //throw new Error("");
 
             //await http.delete(config.apiEndpoint + "/999"); //for expected errors
-            //await http.delete("s" + config.apiEndpoint + "/" + post.id); // for unexpected errors
+            await http.delete("s" + config.apiEndpoint + "/" + post.id); // for unexpected errors
 
             toast.success("Record deleted successfuly.");
         } catch (ex) {
