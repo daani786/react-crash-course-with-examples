@@ -1,4 +1,7 @@
+import "react-toastify/dist/ReactToastify.css";
+
 import React, { Component } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 import config from "../config.json";
 import http from "../services/httpService";
@@ -43,6 +46,8 @@ class Posts extends Component {
 
             //await http.delete(config.apiEndpoint + "/999"); //for expected errors
             //await http.delete("s" + config.apiEndpoint + "/" + post.id); // for unexpected errors
+
+            toast.success("Record deleted successfuly.");
         } catch (ex) {
             console.log("handle delete catch block");
             // Expected
@@ -66,6 +71,8 @@ class Posts extends Component {
     render() {
         return (
             <React.Fragment>
+                <ToastContainer />
+
                 <button className="btn btn-primary" onClick={this.handleAdd}>
                     Add
                 </button>
