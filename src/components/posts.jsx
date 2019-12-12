@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 
-import http from "./services/httpService";
-
-const apiEndpoint = "http://jsonplaceholder.typicode.com/posts";
+import config from "../config.json";
+import http from "../services/httpService";
 
 class Posts extends Component {
     state = {
@@ -11,13 +10,13 @@ class Posts extends Component {
 
     async componentDidMount() {
         // pending > resolved (success) OR rejected (failure)
-        const { data: posts } = await http.get(apiEndpoint);
+        const { data: posts } = await http.get(config.apiEndpoint);
         this.setState({ posts });
     }
 
     handleAdd = async () => {
         const obj = { title: "a", body: "b" };
-        const { data: post } = await http.post(apiEndpoint, obj);
+        const { data: post } = await http.post(config.apiEndpoint, obj);
 
         const posts = [post, ...this.state.posts];
         this.setState({ posts });
@@ -25,7 +24,7 @@ class Posts extends Component {
 
     handleUpdate = async post => {
         post.title = "Updated";
-        await http.put(apiEndpoint + "/" + post.id, post);
+        await http.put(config.apiEndpoint + "/" + post.id, post);
 
         const posts = [...this.state.posts];
         const index = posts.indexOf(post);
@@ -39,11 +38,11 @@ class Posts extends Component {
         this.setState({ posts });
 
         try {
-            await http.delete(apiEndpoint + "/" + post.id);
+            await http.delete(config.apiEndpoint + "/" + post.id);
             //throw new Error("");
 
-            //await http.delete(apiEndpoint + "/999"); //for expected errors
-            //await http.delete("s" + apiEndpoint + "/" + post.id); // for unexpected errors
+            //await http.delete(config.apiEndpoint + "/999"); //for expected errors
+            //await http.delete("s" + config.apiEndpoint + "/" + post.id); // for unexpected errors
         } catch (ex) {
             console.log("handle delete catch block");
             // Expected
