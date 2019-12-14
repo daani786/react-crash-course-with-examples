@@ -74,12 +74,12 @@ class MovieForm extends Form {
         };
     }
 
-    doSubmit = () => {
+    doSubmit = async () => {
         // Call the server
         //const username = this.username.current.value;
         //console.log("submitted");
 
-        saveMovie(this.state.data);
+        await saveMovie(this.state.data);
         this.props.history.push("/movies");
     };
 
