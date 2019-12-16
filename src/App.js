@@ -14,13 +14,23 @@ import Posts from "./components/posts";
 import RegisterForm from "./components/registerForm";
 import Rentals from "./components/rentals";
 import { ToastContainer } from "react-toastify";
+import jwtDecode from "jwt-decode";
 
 class App extends Component {
+    state = {};
+
+    componentDidMount() {
+        try {
+            const jwt = localStorage.getItem("token");
+            const user = jwtDecode(jwt);
+            this.setState({ user });
+        } catch (ex) {}
+    }
     render() {
         return (
             <React.Fragment>
                 <ToastContainer />
-                <NavBar />
+                <NavBar user={this.state.user} />
                 <main className="container">
                     <Switch>
                         <Route path="/login" component={LoginForm}></Route>
