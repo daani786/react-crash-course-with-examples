@@ -3,6 +3,7 @@ import * as userService from "../services/userService";
 import Form from "./common/form";
 import Joi from "joi-browser";
 import React from "react";
+import auth from "../services/authService";
 
 class RegisterForm extends Form {
     state = {
@@ -30,7 +31,7 @@ class RegisterForm extends Form {
         //console.log("submitted");
         try {
             const response = await userService.register(this.state.data);
-            localStorage.setItem("token", response.headers["x-auth-token"]);
+            auth.loginWithJwt(response.headers["x-auth-token"]);
             //this.props.history.push("/");
             window.location = "/";
         } catch (ex) {

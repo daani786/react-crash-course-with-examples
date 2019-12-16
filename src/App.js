@@ -15,17 +15,14 @@ import Posts from "./components/posts";
 import RegisterForm from "./components/registerForm";
 import Rentals from "./components/rentals";
 import { ToastContainer } from "react-toastify";
-import jwtDecode from "jwt-decode";
+import auth from "./services/authService";
 
 class App extends Component {
     state = {};
 
     componentDidMount() {
-        try {
-            const jwt = localStorage.getItem("token");
-            const user = jwtDecode(jwt);
-            this.setState({ user });
-        } catch (ex) {}
+        const user = auth.getCurrentUser();
+        this.setState({ user });
     }
     render() {
         return (
