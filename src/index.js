@@ -11,6 +11,9 @@ import registerServiceWorker from "./registerServiceWorker";
 
 logger.init();
 
+console.log("process.env", process.env);
+console.log("SUPERMAN", process.env.REACT_APP_NAME);
+
 ReactDOM.render(
     <BrowserRouter>
         <App title={"React App"} />
