@@ -32,7 +32,7 @@ class App extends Component {
             <React.Fragment>
                 <ToastContainer />
                 <NavBar user={user} />
-                <main className="container">
+                <main role="main" className="container">
                     <Switch>
                         <Route path="/login" component={LoginForm}></Route>
                         <Route path="/logout" component={Logout}></Route>

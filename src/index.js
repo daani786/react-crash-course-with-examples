@@ -1,6 +1,7 @@
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
+import "./custom.css";
 
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
